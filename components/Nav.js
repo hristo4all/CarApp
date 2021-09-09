@@ -3,20 +3,15 @@ import { StyleSheet, Text, View, TouchableOpacity,Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Task from './Task'
+import Card from './Card'
 import plus from '../assets/plus.png'
 
 function Home() {
     return (
         <View style={styles.container}>
-        <View style={styles.tasksWrapper}>
-           <Text style={styles.sectionTitle}>Today's Tasks</Text>
- 
-           <View style={styles.items}>
-             <Task text={'Task 1'}/>
-             <Task text={'Task 2'}/>
-           </View>
- 
-        </View>
+          <View style={styles.tasksWrapper}>
+           <Card title={"Audi A3 8L 2001"}/>
+          </View>
      </View>
     );
   }
@@ -59,7 +54,7 @@ function Home() {
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
-          tabBarActiveTintColor: '#3EB489',
+          tabBarActiveTintColor: '#FF91AF',
           tabBarStyle: {
                position: 'absolute',
                bottom:35,
@@ -107,7 +102,7 @@ function Home() {
                       width:50,
                       height:50,
                       borderRadius: "50%",
-                      backgroundColor:'#3EB489',
+                      backgroundColor:'#FF91AF',
                       justifyContent:'center',
                       alignItems:'center'
                       }}>
@@ -145,13 +140,15 @@ function Home() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#BDBDBD',
+      backgroundColor: '#FFFF',
       
     },
     tasksWrapper:{
        paddingTop: 20,
        paddingHorizontal: 20,
        marginTop:30,
+       alignContent:'center',
+       alignItems:'center',
     },
     sectionTitle:{
       fontSize: 24,
@@ -159,6 +156,6 @@ function Home() {
     },
     items:{
       marginTop:30,
-    },       
+    },   
   });
   
