@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity,Image } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
+import {colors} from '../utils/colors';
+
 
 
 export default function Card({title}) {
@@ -27,10 +29,10 @@ export default function Card({title}) {
 }
 const styles = StyleSheet.create({
     card:{
-        margin:30,
-        width:330,
+        margin:25,
+        width:370,
         height:330,
-        backgroundColor: '#FF91AF',
+        backgroundColor: colors.main,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
@@ -40,17 +42,18 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.30,
         shadowRadius: 4.65,
         elevation: 8, 
+        alignItems:'center'
       },
       cardHeader :{
-        width:330,
+        width:370,
         height:50,
-        backgroundColor:'#000000',
+        backgroundColor:colors.black,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
       },
       cardTitle:{
         fontSize:24,
-        color:'#FF91AF',
+        color: colors.main,
         position:'absolute',
         margin:15,
       },

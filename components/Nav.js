@@ -1,18 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity,Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,Image, ScrollView, SafeAreaView} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import Task from './Task'
-import Card from './Card'
-import plus from '../assets/plus.png'
+import Card from './Card';
+import plus from '../assets/plus.png';
+import {colors} from '../utils/colors'
 
 function Home() {
     return (
-        <View style={styles.container}>
-          <View style={styles.tasksWrapper}>
+        <SafeAreaView style={styles.container}>
+          <ScrollView contentContainerStyle={styles.tasksWrapper}>
            <Card title={"Audi A3 8L 2001"}/>
-          </View>
-     </View>
+          </ScrollView>
+     </SafeAreaView>
     );
   }
   
@@ -54,7 +54,7 @@ function Home() {
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
-          tabBarActiveTintColor: '#FF91AF',
+          tabBarActiveTintColor: colors.main,
           tabBarStyle: {
                position: 'absolute',
                bottom:35,
@@ -65,6 +65,7 @@ function Home() {
                shadowOpacity:0.06,
                shadowOffset:{width:10,height:10},
                paddingHorizontal:20,
+               backgroundColor:colors.black
                
                },
           headerShown:false,
@@ -102,11 +103,11 @@ function Home() {
                       width:50,
                       height:50,
                       borderRadius: "50%",
-                      backgroundColor:'#FF91AF',
+                      backgroundColor:colors.main,
                       justifyContent:'center',
                       alignItems:'center'
                       }}>
-                        <Image source={plus} style={{width:25,height:25, tintColor:'white'}} ></Image>
+                        <Image source={plus} style={{width:25,height:25, tintColor:'black'}} ></Image>
                   </View>
               </TouchableOpacity>
             ),
@@ -140,13 +141,13 @@ function Home() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#FFFF',
+      backgroundColor: colors.white,
       
     },
     tasksWrapper:{
        paddingTop: 20,
        paddingHorizontal: 20,
-       marginTop:30,
+       marginTop:5,
        alignContent:'center',
        alignItems:'center',
     },
