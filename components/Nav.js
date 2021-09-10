@@ -54,7 +54,7 @@ function Home() {
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
-          tabBarActiveTintColor: colors.main,
+          tabBarActiveTintColor: colors.shadeMillerPink,
           tabBarStyle: {
                position: 'absolute',
                bottom:35,
@@ -100,10 +100,10 @@ function Home() {
             tabBarIcon: ({ focused }) => (
               <TouchableOpacity>
                   <View style={{ 
-                      width:50,
-                      height:50,
+                      width:60,
+                      height:60,
                       borderRadius: "50%",
-                      backgroundColor:colors.main,
+                      backgroundColor:colors.shadeMillerPink,
                       justifyContent:'center',
                       alignItems:'center'
                       }}>
@@ -141,13 +141,13 @@ function Home() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.white,
+      backgroundColor: colors.warmGreyLight,
       
     },
     tasksWrapper:{
        paddingTop: 20,
        paddingHorizontal: 20,
-       marginTop:5,
+       marginTop:20,
        alignContent:'center',
        alignItems:'center',
     },

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         margin:25,
         width:370,
         height:330,
-        backgroundColor: colors.main,
+        backgroundColor: colors.shadeMillerPink,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
