@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         margin:25,
         width:370,
         height:330,
-        backgroundColor: colors.shadeMillerPink,
+        backgroundColor: colors.bgSecondary,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
@@ -59,11 +59,13 @@ const styles = StyleSheet.create({
       },
       contentHeader:{
         fontSize:18,
-        fontWeight:"300",
+        fontWeight:"400",
+        color: colors.main
       },
       contentText:{
         fontSize:18,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        
       },
       contentWrapper:{
           flex: 1,

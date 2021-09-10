@@ -54,7 +54,7 @@ function Home() {
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
-          tabBarActiveTintColor: colors.shadeMillerPink,
+          tabBarActiveTintColor: colors.main,
           tabBarStyle: {
                position: 'absolute',
                bottom:35,
@@ -103,7 +103,7 @@ function Home() {
                       width:60,
                       height:60,
                       borderRadius: "50%",
-                      backgroundColor:colors.shadeMillerPink,
+                      backgroundColor:colors.main,
                       justifyContent:'center',
                       alignItems:'center'
                       }}>
@@ -141,7 +141,7 @@ function Home() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.warmGreyLight,
+      backgroundColor: colors.bg,
       
     },
     tasksWrapper:{
