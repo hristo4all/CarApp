@@ -10,7 +10,11 @@ function Home() {
     return (
         <SafeAreaView style={styles.container}>
           <ScrollView contentContainerStyle={styles.tasksWrapper}>
-           <Card title={"Audi A3 8L 2001"}/>
+           <Card Cardtitle1={"Audi A3 8L 2001"}
+                 group1={{title: "Milage", text:"250 000"} }
+                 group2={{title: "Fuel Consumption", text:"5/100km"} }  
+                 group3={{title: "Engile", text:"1.9TDI"} }    
+                 />
           </ScrollView>
      </SafeAreaView>
     );
