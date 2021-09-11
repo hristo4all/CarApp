@@ -4,24 +4,24 @@ import {colors} from '../utils/colors';
 
 
 
-export default function Card({title}) {
+export default function Card({Cardtitle1, group1, group2, group3}) {
     return(
         <View style={styles.card}>
         <View style={styles.cardHeader}>
-        <Text style={styles.cardTitle}>{title}</Text>
+        <Text style={styles.cardTitleText}>{Cardtitle1}</Text>
         </View>
         <View style={styles.contentWrapper}>
         <View style={styles.cardMilage}>
-            <Text style={styles.contentHeader}>Milage</Text>
-            <Text style={styles.contentText}>250 000km</Text>
+            <Text style={styles.contentHeader}>{group1.title}</Text>
+            <Text style={styles.contentText}>{group1.text}</Text>
         </View>
         <View style={styles.cardFuel}>
-            <Text style={styles.contentHeader}>Fuel Consumption</Text>
-            <Text style={styles.contentText}>5/100km</Text>
+            <Text style={styles.contentHeader}>{group2.title}</Text>
+            <Text style={styles.contentText}>{group2.text}</Text>
         </View>
         <View style={styles.cardEngine}>
-            <Text style={styles.contentHeader}>Engine Type</Text>
-            <Text style={styles.contentText}>1.9TDI</Text>
+            <Text style={styles.contentHeader}>{group3.title}</Text>
+            <Text style={styles.contentText}>{group3.text}</Text>
         </View>
         </View>
       </View>
@@ -32,8 +32,9 @@ const styles = StyleSheet.create({
         margin:25,
         width:370,
         height:330,
-        backgroundColor: colors.bgSecondary,
+        backgroundColor: colors.bg2,
         borderRadius: 20,
+        borderWidth:0.5,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -50,8 +51,9 @@ const styles = StyleSheet.create({
         backgroundColor:colors.black,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
+        borderWidth: 0.5,
       },
-      cardTitle:{
+      cardTitleText:{
         fontSize:24,
         color: colors.main,
         position:'absolute',
@@ -60,12 +62,13 @@ const styles = StyleSheet.create({
       contentHeader:{
         fontSize:18,
         fontWeight:"400",
-        color: colors.main
+        color: colors.header2,
+        
       },
       contentText:{
         fontSize:18,
         fontWeight:"bold",
-        
+        color: colors.white,
       },
       contentWrapper:{
           flex: 1,
