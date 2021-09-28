@@ -1,14 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import {colors} from '../utils/colors';
-
-
+import Icon from '@mdi/react';
+import {mdiCat} from '@mdi/js';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+//=============================
+// Add Icon next to the Header 
+//=============================
 
 export default function Card({Cardtitle1, group1, group2, group3}) {
     return(
         <View style={styles.card}>
         <View style={styles.cardHeader}>
         <Text style={styles.cardTitleText}>{Cardtitle1}</Text>
+        <Text style={styles.subHeader}>WAUZZZ8LZ1A111243</Text>
         </View>
         <View style={styles.contentWrapper}>
         <View style={styles.cardMilage}>
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
     card:{
         margin:25,
         width:370,
-        height:330,
+        height:350,
         backgroundColor: colors.bg2,
         borderRadius: 20,
         borderWidth:0.5,
@@ -47,7 +52,7 @@ const styles = StyleSheet.create({
       },
       cardHeader :{
         width:370,
-        height:50,
+        height:90,
         backgroundColor:colors.black,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
@@ -69,6 +74,14 @@ const styles = StyleSheet.create({
         fontSize:18,
         fontWeight:"bold",
         color: colors.white,
+      },
+      subHeader:{
+        color: colors.main,
+        marginTop:50,
+        margin:15,
+        fontSize:16,
+        position:'absolute',
+        opacity:.5,
       },
       contentWrapper:{
           flex: 1,
