@@ -34,7 +34,7 @@ function Home() {
     return (
         <View style={styles.container}>
             <View style={styles.tasksWrapper}>
-                <Text style={styles.sectionTitle}>Statistics!</Text>
+                <Text style={styles.sectionTitle}>Live Data</Text>
             </View>
         </View>
     );
@@ -119,12 +119,12 @@ function Home() {
         />     
 
         <Tab.Screen
-          name="Statistics"
+          name="LiveData"
           component={Stats}
           options={{
-            tabBarLabel: 'Statistics',
+            tabBarLabel: 'Live Data',
             tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="poll" color={color} size={size} />
+              <MaterialCommunityIcons name="lightning-bolt" color={color} size={size} />
             ),
           }}
         />
@@ -157,7 +157,9 @@ function Home() {
     },
     sectionTitle:{
       fontSize: 24,
+      paddingTop: 15,
       fontWeight: 'bold',
+      color: colors.white,
     },
     items:{
       marginTop:30,
