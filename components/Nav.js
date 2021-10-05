@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity,Image, ScrollView, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,Image, ScrollView, SafeAreaView, Platform} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Card from './Card';
@@ -63,7 +63,7 @@ function Home() {
                position: 'absolute',
                bottom:35,
                marginHorizontal:30,
-               height:80,
+               height:(Platform.OS === 'ios') ? 80 : 50,
                borderRadius:10,
                shadowColor:'000',
                shadowOpacity:0.06,
@@ -106,7 +106,7 @@ function Home() {
                   <View style={{ 
                       width:60,
                       height:60,
-                      borderRadius: "50%",
+                      borderRadius: 50,
                       backgroundColor:colors.main,
                       justifyContent:'center',
                       alignItems:'center'
