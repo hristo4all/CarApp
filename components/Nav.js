@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Card from './Card';
 import plus from '../assets/plus.png';
 import {colors} from '../utils/colors';
-import { AnimatedGaugeProgress, GaugeProgress } from 'react-native-simple-gauge';
+
 
 function Home() {
     return (
@@ -37,18 +37,6 @@ function Home() {
             <View style={styles.tasksWrapper}>
                 <Text style={styles.sectionTitle}>Live Data</Text>
             </View>
-            <AnimatedGaugeProgress
-              size={200}
-              width={15}
-              fill={100}
-              rotation={90}
-              cropDegree={90}
-              tintColor="#4682b4"
-              delay={0}
-              backgroundColor="#b0c4de"
-              stroke={[2, 2]} //For a equaly dashed line
-              strokeCap="circle" 
-            />
         </View>
     );
   }
