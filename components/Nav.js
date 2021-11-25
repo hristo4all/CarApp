@@ -13,7 +13,9 @@ function Home() {
            <Card Cardtitle1={"Audi A3 8L 2001"}
                  group1={{title: "Milage", text:"250 000"} }
                  group2={{title: "Fuel Consumption", text:"5/100km"} }  
-                 group3={{title: "Engile", text:"1.9TDI"} }    
+                 group3={{title: "Engile", text:"1.9TDI"} }  
+                 height={370}
+                 width={90}  
                  />
           </ScrollView>
      </SafeAreaView>
@@ -36,6 +38,13 @@ function Home() {
             <View style={styles.tasksWrapper}>
                 <Text style={styles.sectionTitle}>Statistics!</Text>
             </View>
+            <Card Cardtitle1={"Audi A3 8L 2001"}
+                 group1={{title: "Milage", text:"250 000"} }
+                 group2={{title: "Fuel Consumption", text:"5/100km"} }  
+                 group3={{title: "Engile", text:"1.9TDI"} }  
+                 height={370}
+                 width={90}  
+                 />
         </View>
     );
   }
@@ -162,6 +171,23 @@ function Home() {
     },
     items:{
       marginTop:30,
+    },
+    smallCard:{
+      margin:25,
+      width:170,
+      height:100,
+      backgroundColor: colors.bg2,
+      borderRadius: 20,
+      borderWidth:0.5,
+      shadowColor: "#000",
+      shadowOffset: {
+          width: 0,
+          height: 4,
+        },
+      shadowOpacity: 0.30,
+      shadowRadius: 4.65,
+      elevation: 8, 
+      alignItems:'center'
     },   
   });
   

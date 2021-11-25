@@ -7,7 +7,6 @@ export const colors = {
     borderColor: '#649C84',
     white: '#fff',
     black: '#000000',
-    warmGreyLight: '#625D52',
-    warmGreyDark: '#27241D',
+    primaryShade1: '#040D0A'
   };
   
