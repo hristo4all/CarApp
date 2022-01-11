@@ -17,7 +17,7 @@ export default function Card({
 	width,
 }) {
 	return (
-		<View style={[styles.card, { width: { width }, height: { height } }]}>
+		<View style={[styles.card]}>
 			<View style={styles.cardHeader}>
 				<View style={{ flex: 1 }}>
 					<Text style={styles.cardTitleText}>{Cardtitle1}</Text>
@@ -50,7 +50,6 @@ export default function Card({
 const styles = StyleSheet.create({
 	card: {
 		margin: 25,
-
 		backgroundColor: colors.bg2,
 		borderRadius: 20,
 		borderWidth: 0.5,
