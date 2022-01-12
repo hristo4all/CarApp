@@ -45,8 +45,16 @@ function Profile() {
 
 function Stats() {
 	const [records, setRecord] = useState([
-		{ date: "20/5/2021", litres: 12, price: 2.41, key: "15" },
-		{ date: "15/4/2021", litres: 30, price: 2.42, key: "14" },
+		{ date: "20/5/2021", litres: 12, price: 2.41, key: "10" },
+		{ date: "15/4/2021", litres: 30, price: 2.42, key: "9" },
+		{ date: "20/5/2021", litres: 12, price: 2.41, key: "8" },
+		{ date: "15/4/2021", litres: 30, price: 2.42, key: "7" },
+		{ date: "20/5/2021", litres: 12, price: 2.41, key: "6" },
+		{ date: "15/4/2021", litres: 30, price: 2.42, key: "5" },
+		{ date: "20/5/2021", litres: 12, price: 2.41, key: "4" },
+		{ date: "15/4/2021", litres: 30, price: 2.42, key: "3" },
+		{ date: "20/5/2021", litres: 12, price: 2.41, key: "2" },
+		{ date: "15/4/2021", litres: 30, price: 2.42, key: "1" },
 	]);
 
 	const sumAmount = records.reduce((a, v) => (a = a + v.litres * v.price), 0);
@@ -78,7 +86,10 @@ function Stats() {
 							<View style={styles.record}>
 								<Text style={styles.recordDate}>{item.date}</Text>
 								<Text style={styles.recordText}>
-									{item.litres} X {item.price}={item.litres * item.price}
+									{item.litres}L <Text style={{ color: colors.main }}> X </Text>{" "}
+									${item.price}
+									<Text style={{ color: colors.main }}> = </Text>
+									{item.litres * item.price}
 								</Text>
 							</View>
 						</View>
@@ -169,13 +180,13 @@ export default function Nav() {
 			/>
 
 			<Tab.Screen
-				name="LiveData"
+				name="Stats"
 				component={Stats}
 				options={{
-					tabBarLabel: "Live Data",
+					tabBarLabel: "Stats",
 					tabBarIcon: ({ color, size }) => (
 						<MaterialCommunityIcons
-							name="lightning-bolt"
+							name="clipboard-list"
 							color={color}
 							size={size}
 						/>
@@ -245,13 +256,13 @@ const styles = StyleSheet.create({
 		shadowRadius: 4.65,
 	},
 	recordCard: {
-		backgroundColor: "#333333",
+		backgroundColor: colors.bg,
 		padding: 20,
-		marginTop: 15,
+		marginTop: 1,
 		marginLeft: 10,
 		marginRight: 10,
-		borderRadius: 15,
-		borderWidth: 0.1,
+		borderTopRightRadius: 10,
+		borderTopWidth: 0.3,
 	},
 	recordDate: {
 		color: colors.main,
