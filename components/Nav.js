@@ -64,7 +64,7 @@ function Stats() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.tasksWrapper}>
-				<Text style={styles.sectionTitle}>Live Data</Text>
+				<Text style={styles.sectionTitle}>Refuel Records</Text>
 			</View>
 			<View style={styles.total}>
 				<Text style={styles.totalText}>
@@ -78,23 +78,34 @@ function Stats() {
 					<Text style={{ color: colors.white }}>{sumLitres.toFixed(2)}</Text>
 				</Text>
 			</View>
-			<View style={styles.field}>
+			<View style={styles.wrapper}>
+				<View style={styles.wrapperHeader}>
+					<Text style={styles.statHeader}>Date</Text>
+					<Text style={styles.statHeader}>Litres</Text>
+					<Text style={styles.statHeader}>Price</Text>
+					<Text style={styles.statHeader}>Total</Text>
+				</View>
 				<FlatList
 					data={records}
 					renderItem={({ item }) => (
 						<View style={styles.recordCard}>
 							<View style={styles.record}>
 								<Text style={styles.recordDate}>{item.date}</Text>
-								<Text style={styles.recordText}>
-									{item.litres}L <Text style={{ color: colors.main }}> X </Text>{" "}
-									${item.price}
-									<Text style={{ color: colors.main }}> = </Text>
-									{item.litres * item.price}
+								<Text style={styles.recordBody}>{item.litres}</Text>
+								<Text style={styles.recordBody}>{item.price}</Text>
+								<Text style={styles.recordBody}>
+									{item.price * item.litres}
 								</Text>
 							</View>
 						</View>
 					)}
 				/>
+				<TouchableOpacity style={styles.addButtonWrapper}>
+					<Text style={styles.addButtonText}>Add Record</Text>
+					<View style={styles.addButton}>
+						<MaterialCommunityIcons name="plus" color={colors.main} size={35} />
+					</View>
+				</TouchableOpacity>
 			</View>
 		</View>
 	);
@@ -256,30 +267,33 @@ const styles = StyleSheet.create({
 		shadowRadius: 4.65,
 	},
 	recordCard: {
-		backgroundColor: colors.bg,
-		padding: 20,
+		padding: 15,
 		marginTop: 1,
-		marginLeft: 10,
-		marginRight: 10,
 		borderTopRightRadius: 10,
 		borderTopWidth: 0.3,
 	},
-	recordDate: {
-		color: colors.main,
-		fontSize: 22,
-		marginRight: 20,
-	},
+
 	record: {
 		flexDirection: "row",
-		alignItems: "center",
-		alignContent: "center",
 	},
-	recordText: {
-		color: colors.white,
+	recordBody: {
+		color: colors.main,
 		fontSize: 18,
+		marginLeft: 15,
+		marginRight: 15,
+	},
+	recordDate: {
+		color: colors.main,
+		fontSize: 18,
+		marginLeft: 0,
+		marginRight: 15,
 	},
 	total: {
 		backgroundColor: colors.bg2,
+		height: 40,
+		margin: 10,
+		justifyContent: "center",
+		alignItems: "center",
 		borderRadius: 15,
 		borderWidth: 0.2,
 		shadowColor: "#000",
@@ -289,11 +303,72 @@ const styles = StyleSheet.create({
 		},
 		shadowOpacity: 0.3,
 		shadowRadius: 4.65,
-		margin: 15,
-		padding: 20,
 	},
 	totalText: {
 		color: colors.main,
 		fontSize: 22,
+	},
+	wrapper: {
+		margin: 25,
+		height: 500,
+		backgroundColor: colors.bg2,
+		borderRadius: 20,
+		borderWidth: 0.5,
+		borderColor: "black",
+		shadowColor: "#000",
+		shadowOffset: {
+			width: 0,
+			height: 4,
+		},
+		shadowOpacity: 0.3,
+		shadowRadius: 4.65,
+		elevation: 8,
+		alignItems: "center",
+	},
+	wrapperHeader: {
+		width: 362,
+		height: 65,
+		backgroundColor: colors.primaryShade1,
+		borderTopLeftRadius: 20,
+		borderTopRightRadius: 20,
+		borderWidth: 0.5,
+		flexDirection: "row",
+		justifyContent: "center",
+	},
+	statHeader: {
+		color: colors.white,
+		margin: 15,
+		fontSize: 25,
+	},
+	addButton: {
+		borderRadius: 40,
+		backgroundColor: colors.black,
+		width: 50,
+		height: 50,
+		justifyContent: "center",
+		alignItems: "center",
+		alignSelf: "flex-end",
+		borderBottomColor: colors.bg,
+		borderTopColor: colors.bg2,
+		borderLeftColor: colors.bg2,
+		borderRightColor: colors.bg2,
+		borderWidth: 5,
+		left: 10,
+	},
+	addButtonWrapper: {
+		backgroundColor: colors.black,
+		width: 160,
+		height: 50,
+		top: 15,
+		borderRadius: 30,
+		borderTopLeftRadius: 12,
+		borderBottomLeftRadius: 12,
+		flexDirection: "row",
+	},
+	addButtonText: {
+		color: colors.main,
+		fontSize: 20,
+		alignSelf: "center",
+		marginLeft: 10,
 	},
 });
