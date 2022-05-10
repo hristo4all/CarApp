@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
 		fontSize: 24,
 		paddingTop: 15,
 		fontWeight: "bold",
-		color: colors.white,
+		color: colors.main,
 	},
 	smallCard: {
 		margin: 25,
@@ -277,13 +277,13 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 	},
 	recordBody: {
-		color: colors.main,
+		color: colors.white,
 		fontSize: 18,
 		marginLeft: 15,
 		marginRight: 15,
 	},
 	recordDate: {
-		color: colors.main,
+		color: colors.white,
 		fontSize: 18,
 		marginLeft: 0,
 		marginRight: 15,
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
 		shadowRadius: 4.65,
 	},
 	totalText: {
-		color: colors.main,
+		color: colors.header,
 		fontSize: 22,
 	},
 	wrapper: {
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
 	wrapperHeader: {
 		width: 362,
 		height: 65,
-		backgroundColor: colors.primaryShade1,
+		backgroundColor: colors.black,
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
 		borderWidth: 0.5,
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	statHeader: {
-		color: colors.white,
+		color: colors.header,
 		margin: 15,
 		fontSize: 25,
 	},

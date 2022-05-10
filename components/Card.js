@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 	contentHeader: {
 		fontSize: 18,
 		fontWeight: "400",
-		color: colors.header2,
+		color: colors.header,
 	},
 	contentText: {
 		fontSize: 18,
